@@ -51,6 +51,58 @@
             transition: all 1s;
         }
 
+
+        .datetime{
+            color: #fff;
+            background: #10101E;
+            font-family: "Segoe UI", sans-serif;
+            width: 340px;
+            padding: 15px 10px;
+            border: 3px solid #2E94E3;
+            border-radius: 5px;
+            -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+            transition: 0.5s;
+            transition-property: background, box-shadow;
+        }
+
+
+        .datetime:hover{
+            background: #2E94E3;
+            box-shadow: 0 0 30px #2E94E3;
+        }
+
+        .date{
+           font-size: 20px;
+           font-weight: 600;
+           text-align: center;
+           letter-spacing: 3px;
+        }
+
+        .time{
+            font-size: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .time span:not(:last-child){
+            position: relative;
+            margin: 0 6px;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 3px;
+        }
+
+       .time span:last-child{
+           background: #2E94E3;
+           font-size: 30px;
+           font-weight: 600;
+           text-transform: uppercase;
+           margin-top: 10px;
+           padding: 0 5px;
+           border-radius: 3px;
+       }
+
 /*.card span:nth-child(1){*/
 /*    background: linear-gradient(to right, transparent, red);*/
 /*    animation: animate1 2s linear infinite;*/
@@ -63,6 +115,11 @@
 /*                transform: translateX(100%);*/
 /*            }*/
 /*        }*/
+
+
+
+
+
 
 
     </style>
@@ -87,6 +144,24 @@
    </div>
 
 </div>
+
+
+<div class="datetime">
+    <div class="date">
+        <span id="dayname">Day</span>
+        <span id="month">Month</span>
+        <span id="daynum">00</span>
+        <span id="year">Year</span>
+    </div>
+    <div class="time">
+        <span id="hour">00</span>
+        <span id="minutes">00</span>
+        <span id="seconds">00</span>
+        <span id="period">AM</span>
+    </div>
+</div>
+
+
 
 
 <script src="assets/js/script.js"></script>
