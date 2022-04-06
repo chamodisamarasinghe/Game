@@ -27,6 +27,7 @@
         .container {
             width: 1080px;
             margin: 0 auto;
+            border: #0a53be;
         }
 
         .card {
@@ -39,9 +40,29 @@
             text-align: center;
             border-radius: 5px;
             box-shadow: 10px 10px 10px #ccc;
+
+        }
+        .card:hover{
+            transition-property: all;
+            transition: 0.5s;
+            cursor: pointer;
+            color: #181818;
+            transform: scale(0.8);
+            transition: all 1s;
         }
 
-
+/*.card span:nth-child(1){*/
+/*    background: linear-gradient(to right, transparent, red);*/
+/*    animation: animate1 2s linear infinite;*/
+/*}*/
+/*        @keyframes animate1 {*/
+/*            0%{*/
+/*                transform: translateX(-100%);*/
+/*            }*/
+/*            100%{*/
+/*                transform: translateX(100%);*/
+/*            }*/
+/*        }*/
 
 
     </style>
@@ -71,5 +92,8 @@
 <script src="assets/js/script.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script src="assets/jQuery/oridomi.min.js"></script>
+<script>
+
+</script>
 </body>
 </html>
