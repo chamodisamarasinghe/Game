@@ -36,6 +36,7 @@
             margin: 10px;
             height: 200px;
             width: 150px;
+            /*background: #0a53be;*/
             background: url("assets/images/crd.jpg");
             border: 5px solid yellow;
             text-align: center;
@@ -43,14 +44,7 @@
             box-shadow: 10px 10px 10px #ccc;
 
         }
-        .card:hover{
-            transition-property: all;
-            transition: 0.5s;
-            cursor: pointer;
-            color: #181818;
-            transform: scale(0.8);
-            transition: all 1s;
-        }
+
 
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
@@ -59,9 +53,9 @@
             /*background-color:  #764b26;*/
             background: url("assets/images/snd.jpg");
             width: 35%;
-            margin-left: 950px;
-            margin-top: -99px;
-            /*margin: auto;*/
+            /*margin-left: 950px;*/
+            /*margin-top: -99px;*/
+            margin: auto;
             padding-top: 40px;
             /*height: 80px;*/
             padding-bottom: 50px;
@@ -174,25 +168,6 @@
 
 
 // game
-
-    $(document).ready(function(){
-        var app ={
-            init: function () {
-            cards: [1,1,2,2,3,3,4,4,5,5,6,6];
-                app.shuffle();
-            },
-            shuffle: function(){
-                for (var i = Things.length - 1; i>=0; i--){
-
-                };
-            },
-            clickHandlers: function () {
-
-            }
-        };
-        app.init();
-
-   });
 
 
 
