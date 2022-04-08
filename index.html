@@ -28,7 +28,7 @@
         .container {
             width: 1080px;
             margin: 0 auto;
-            border: #0a53be;
+
         }
 
         .card {
@@ -38,11 +38,22 @@
             width: 150px;
             /*background: #0a53be;*/
             background: url("assets/images/crd.jpg");
-            border: 5px solid yellow;
+            border: 10px solid black;
             text-align: center;
             border-radius: 5px;
             box-shadow: 10px 10px 10px #ccc;
 
+        }
+
+        .card:hover {
+            cursor: pointer;
+            border: 3px solid yellow;
+        }
+
+        .card p {
+            font-size: 50px;
+            color: black;
+            font-weight: bold;
         }
 
 
@@ -79,7 +90,7 @@
     </style>
 </head>
 <body >
-<p class="fw-bold" >Match The Pairs</p>
+<!--<p class="fw-bold" >Match The Pairs</p>-->
 <div id = "digital-clock"><h3>time</h3> </div>
 
 
