@@ -210,7 +210,35 @@ $(document).ready(function () {
                 app.checkMatch();
             });
         },
-    }
+        checkMatch: function () {
+            if($('.selcted').length == 2){
+                if ($(' .selected').first().data('cardValue') == $(' .selected').last().data('cardValue')){
+                    $(' .selected').each(function () {
+                        $(this).animate({
+                            opacity: 0
+                        }).removeClass('unmatched');
+                    });
+                    $('.selected').each(function () {
+                        $(this).removeClass('selected');
+                    });
+                    app.checkWin();
+                }else{
+                    setTimeout(function () {
+                        $('.selected').each(function () {
+                            $(this).html('').removeClass('selected');
+                        });
+                    }, 100);
+                }
+            }
+        },
+        checkWin: function () {
+            if ($('.unmatched').length === 0){
+                $('.container').html('<h1>You Win!</h1>');
+            }
+
+        }
+    };
+    app.init();
 });
 
 
