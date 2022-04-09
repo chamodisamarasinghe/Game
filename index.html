@@ -8,19 +8,84 @@
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <style>
-        h3{
-            color: white;
-            /*margin-left: 470px;*/
-            font-family: "Righteous", cursive;
-            /*font-size: 70px;*/
-            /*margin-top: -150px;*/
-        }
+        /*h3{*/
+        /*    color: white;*/
+        /*    !*margin-left: 470px;*!*/
+        /*    font-family: "Righteous", cursive;*/
+        /*    !*font-size: 70px;*!*/
+        /*    !*margin-top: -150px;*!*/
+        /*}*/
 
 
-        body{
-            background: url("assets/images/table.jpg");
-        }
+        /*body{*/
+        /*    background: url("assets/images/table.jpg");*/
+        /*}*/
 
+        /** {*/
+        /*    box-sizing: border-box;*/
+        /*}*/
+
+        /*.container {*/
+        /*    width: 1080px;*/
+        /*    margin: 0 auto;*/
+
+        /*}*/
+
+        /*.card {*/
+        /*    float: left;*/
+        /*    margin: 10px;*/
+        /*    height: 200px;*/
+        /*    width: 150px;*/
+        /*    !*background: #0a53be;*!*/
+        /*    background: url("assets/images/crd.jpg");*/
+        /*    border: 10px solid black;*/
+        /*    text-align: center;*/
+        /*    border-radius: 5px;*/
+        /*    box-shadow: 10px 10px 10px #ccc;*/
+
+        /*}*/
+
+        /*.card:hover {*/
+        /*    cursor: pointer;*/
+        /*    border: 3px solid yellow;*/
+        /*}*/
+
+        /*.card p {*/
+        /*    font-size: 50px;*/
+        /*    color: black;*/
+        /*    font-weight: bold;*/
+        /*}*/
+
+
+        /*@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');*/
+
+
+        /*#digital-clock {*/
+        /*    !*background-color:  #764b26;*!*/
+        /*    background: url("assets/images/snd.jpg");*/
+        /*    width: 35%;*/
+        /*    !*margin-left: 950px;*!*/
+        /*    !*margin-top: -99px;*!*/
+        /*    margin: auto;*/
+        /*    padding-top: 40px;*/
+        /*    !*height: 80px;*!*/
+        /*    padding-bottom: 50px;*/
+        /*    font-family: 'Open Sans Condensed', sans-serif;*/
+        /*    color: white;*/
+        /*    font-size: 50px;*/
+        /*    text-align: center;*/
+        /*    border: 10px solid black;*/
+        /*    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+        /*}*/
+
+
+        /* p{*/
+        /*    color: white;*/
+        /*    font-family: "Righteous", cursive;*/
+        /*    font-size: 50px;*/
+        /*    margin-left: 400px;*/
+        /*    font-weight: bolder;*/
+        /*}*/
         * {
             box-sizing: border-box;
         }
@@ -28,7 +93,6 @@
         .container {
             width: 1080px;
             margin: 0 auto;
-
         }
 
         .card {
@@ -36,13 +100,12 @@
             margin: 10px;
             height: 200px;
             width: 150px;
-            /*background: #0a53be;*/
+            /*background: lightblue;*/
             background: url("assets/images/crd.jpg");
             border: 10px solid black;
             text-align: center;
             border-radius: 5px;
             box-shadow: 10px 10px 10px #ccc;
-
         }
 
         .card:hover {
@@ -57,7 +120,16 @@
         }
 
 
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+        body{
+            background: url("assets/images/table.jpg");
+        }
+
+
+
+
+
+
 
 
         #digital-clock {
@@ -78,14 +150,6 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
-
-         p{
-            color: white;
-            font-family: "Righteous", cursive;
-            font-size: 50px;
-            margin-left: 400px;
-            font-weight: bolder;
-        }
 
     </style>
 </head>
@@ -125,122 +189,125 @@
 
 <script>
 
-   // time
-
-    function Time() {
-
-
-        var date = new Date();
-        var hour = date.getHours();
-        var minute = date.getMinutes();
-        var second = date.getSeconds();
-
-        var period = "";
-
-
-        if (hour >= 12) {
-            period = "PM";
-        } else {
-            period = "AM";
-        }
-
-
-        if (hour == 0) {
-            hour = 12;
-        } else {
-            if (hour > 12) {
-                hour = hour - 12;
-            }
-        }
-
-
-        hour = update(hour);
-        minute = update(minute);
-        second = update(second);
-
-
-        document.getElementById("digital-clock").innerText = hour + " : " + minute + " : " + second + " " + period;
-
-
-        setTimeout(Time, 1000);
-    }
-
-
-    function update(t) {
-        if (t < 10) {
-            return "0" + t;
-        }
-        else {
-            return t;
-        }
-    }
-
-    Time();
 
 
 // game
-$(document).ready(function () {
+
+$(document).ready(function() {
     var app = {
         cards: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6],
-        init: function () {
+        init: function() {
             app.shuffle();
-
         },
-        shuffle: function () {
+        shuffle: function() {
             var random = 0;
             var temp = 0;
-            for (i = 1; i< app.cards.length; i++){
+            for (i = 1; i < app.cards.length; i++) {
                 random = Math.round(Math.random() * i);
                 temp = app.cards[i];
                 app.cards[i] = app.cards[random];
                 app.cards[random] = temp;
             }
             app.assignCards();
-            console.log('Shuffled cards array: ' + app.cards);
+            console.log('Shuffled Card Array: ' + app.cards);
         },
-        assignCards: function () {
-            $('.card').each(function (index) {
+        assignCards: function() {
+            $('.card').each(function(index) {
                 $(this).attr('data-card-value', app.cards[index]);
             });
             app.clickHandlers();
         },
-        clickHandlers: function () {
-            $('.card').on('click', function () {
+        clickHandlers: function() {
+            $('.card').on('click', function() {
                 $(this).html('<p>' + $(this).data('cardValue') + '</p>').addClass('selected');
                 app.checkMatch();
             });
         },
-        checkMatch: function () {
-            if($('.selcted').length == 2){
-                if ($(' .selected').first().data('cardValue') == $(' .selected').last().data('cardValue')){
-                    $(' .selected').each(function () {
+        checkMatch: function() {
+            if ($('.selected').length === 2) {
+                if ($('.selected').first().data('cardValue') == $('.selected').last().data('cardValue')) {
+                    $('.selected').each(function() {
                         $(this).animate({
                             opacity: 0
                         }).removeClass('unmatched');
                     });
-                    $('.selected').each(function () {
+                    $('.selected').each(function() {
                         $(this).removeClass('selected');
                     });
                     app.checkWin();
-                }else{
-                    setTimeout(function () {
-                        $('.selected').each(function () {
+                } else {
+                    setTimeout(function() {
+                        $('.selected').each(function() {
                             $(this).html('').removeClass('selected');
                         });
-                    }, 100);
+                    }, 1000);
                 }
             }
         },
-        checkWin: function () {
-            if ($('.unmatched').length === 0){
-                $('.container').html('<h1>You Win!</h1>');
+        checkWin: function() {
+            if ($('.unmatched').length === 0) {
+                $('.container').html('<h1>You Won!</h1>');
             }
-
         }
     };
     app.init();
 });
 
+
+
+
+
+// time
+
+function Time() {
+
+
+    var date = new Date();
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
+
+    var period = "";
+
+
+    if (hour >= 12) {
+        period = "PM";
+    } else {
+        period = "AM";
+    }
+
+
+    if (hour == 0) {
+        hour = 12;
+    } else {
+        if (hour > 12) {
+            hour = hour - 12;
+        }
+    }
+
+
+    hour = update(hour);
+    minute = update(minute);
+    second = update(second);
+
+
+    document.getElementById("digital-clock").innerText = hour + " : " + minute + " : " + second + " " + period;
+
+
+    setTimeout(Time, 1000);
+}
+
+
+function update(t) {
+    if (t < 10) {
+        return "0" + t;
+    }
+    else {
+        return t;
+    }
+}
+
+Time();
 
 
 </script>
