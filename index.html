@@ -43,6 +43,11 @@
             align-content: center;
         }
 
+        .card .selected{
+            transform: rotateY(180deg);
+            transition: 0.5s;
+        }
+
 
 
         body{
@@ -119,24 +124,24 @@
        <div class="card unmatched"></div>
        <div class="card unmatched"></div>
        <div class="card unmatched"></div>
-<!--       <div class="card unmatched"></div>-->
-<!--       <div class="card unmatched"></div>-->
-<!--       <div class="card unmatched"></div>-->
-<!--       <div class="card unmatched"></div>-->
-<!--       <div class="card unmatched"></div>-->
-<!--       <div class="card unmatched"></div>-->
-<!--       <div class="card unmatched"></div>-->
-<!--       <div class="card unmatched"></div>-->
-<!--       <div class="card unmatched"></div>-->
-<!--       <div class="card unmatched"></div>-->
-<!--       <div class="card unmatched"></div>-->
-<!--       <div class="card unmatched"></div>-->
-<!--       <div class="card unmatched"></div>-->
-<!--       <div class="card unmatched"></div>-->
-<!--       <div class="card unmatched"></div>-->
-<!--       <div class="card unmatched"></div>-->
-<!--       <div class="card unmatched"></div>-->
-<!--       <div class="card unmatched"></div>-->
+       <div class="card unmatched"></div>
+       <div class="card unmatched"></div>
+       <div class="card unmatched"></div>
+       <div class="card unmatched"></div>
+       <div class="card unmatched"></div>
+       <div class="card unmatched"></div>
+       <div class="card unmatched"></div>
+       <div class="card unmatched"></div>
+       <div class="card unmatched"></div>
+       <div class="card unmatched"></div>
+       <div class="card unmatched"></div>
+       <div class="card unmatched"></div>
+       <div class="card unmatched"></div>
+       <div class="card unmatched"></div>
+       <div class="card unmatched"></div>
+       <div class="card unmatched"></div>
+       <div class="card unmatched"></div>
+       <div class="card unmatched"></div>
    </div>
 
 </div>
@@ -159,7 +164,7 @@
 
 $(document).ready(function() {
     var app = {
-        cards: [1, 1, 2, 2, 3, 3],
+        cards: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12],
         init: function() {
             app.shuffle();
         },
